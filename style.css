@@ -1,0 +1,178 @@
+/* 1. Философия */
+.intro {
+  background-image: url("https://png.pngtree.com/background/20250121/original/pngtree-background-mountains-picture-image_15393088.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* 2. Студенты */
+.students {
+  background-image: url("https://wallpapers.com/images/hd/leaf-background-o4a74dtugqixhtu2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* 3. Подкасты */
+.podcast {
+  background-image: url("https://i.pinimg.com/originals/79/ff/17/79ff17f6e2b2f8385ff63985e9fccbdb.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* 4. Макала */
+.makala {
+  background-image: url("https://wallpapers.com/images/hd/hd-nature-green-hills-4n4irp6lwgp2wuvt.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.roleplay {
+  background-image: url("https://i.ytimg.com/vi/Tx6BEMd_mlU/maxresdefault.jpg");
+  background-size: cover;
+  background-position: center;
+}
+/* ---- ОБЩИЙ ФОН ---- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+    background: linear-gradient(180deg, #0f0f0f, #1a1a1a, #2b2b2b);
+    color: rgb(255, 255, 255);
+    overflow-x: hidden;
+}
+
+/* ---- НАВБАР ---- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.navbar a {
+    color: #d0d0d0;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+    font-family: "Playfair Display", serif;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: white;
+    text-shadow: 0 0 10px white;
+}
+
+/* ---- СЕКЦИИ ---- */
+.section {
+    min-height: 100vh;
+    padding: 120px 40px 60px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s ease;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---- СТУДЕНТЫ ---- */
+.students-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #ffffff15;
+    padding: 20px;
+    border-radius: 16px;
+    backdrop-filter: blur(15px);
+    border: 1px solid #ffffff25;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* ---- ПОДКАСТЫ ---- */
+.podcast-column {
+    display: flex;
+    flex-direction: row;      /* меняем с column на row */
+    gap: 60px;                /* расстояние между видео */
+    margin-top: 40px;
+    justify-content: center;  /* центрируем ряд */
+    flex-wrap: wrap;          /* перенос на следующую строку, если мало места */
+}
+
+.podcast-column video {
+    width: 85%;
+    max-width: 400px;         /* уменьшаем, чтобы все помещалось в ряд */
+    border-radius: 18px;
+    box-shadow: 0 0 30px #00000080;
+}
+
+.video-block {
+    width: 400px;             /* размер каждого блока */
+}
+
+.video-block video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* ---- МАКАЛАЛАР ---- */
+.makala-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 650px;
+    margin: 40px auto 0;
+}
+
+.makala-item {
+    background: #ffffff10;
+    padding: 18px 20px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    border: 1px solid #ffffff20;
+    transition: 0.3s;
+}
+
+.makala-item:hover {
+    transform: translateY(-8px);
+    background: #ffffff20;
+}
+
+.fio {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+/* ---- РӨЛДІК ОЙЫН ---- */
+.roleplay-big video {
+    width: 85%;
+    max-width: 950px;
+    border-radius: 20px;
+    margin-top: 40px;
+    box-shadow: 0 0 30px #00000080;
+}
